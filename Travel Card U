@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Card UI</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #000000;
+      --card-bg: #f4f4f4;
+    }
+
+    body.dark {
+      --bg: #121212;
+      --text: #ffffff;
+      --card-bg: #1f1f1f;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      width: 320px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .tags span {
+      display: inline-block;
+      background-color: #ccc;
+      padding: 4px 10px;
+      margin-right: 5px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .button {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .button button {
+      padding: 8px 16px;
+      background-color: #7aa0f7;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      padding: 6px 12px;
+      background-color: #444;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" onclick="document.body.classList.toggle('dark')">
+    Toggle Dark Mode
+  </button>
+
+  <div class="card">
+    <img src="https://media.istockphoto.com/id/1169181689/photo/southern-california-beach-scenic.jpg?s=612x612&w=0&k=20&c=ATyjIh504SmeHelwW_dy8heghTChjTY_h6JBIqHLuRc=" alt="Nature" />
+    <div class="card-content">
+      <div class="tags">
+        <span>Nature</span>
+        <span>Lake</span>
+      </div>
+      <h2>San Diego</h2>
+      <p>
+        A beautiful natural view with lakes and mountains. Great for relaxation and travel photography!
+      </p>
+      <div class="button">
+        <button>Explore</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
